@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the website */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero-section {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Snapinsta.app_432173374_1762234524285606_3083567628626560526_n_1080.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+        .hero-text {
+            color: #4B5563;
+        }
+        .hero-btn {
+            background-color: #4F46E5;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .hero-btn:hover {
+            background-color: #4338CA;
+        }
+        .section-title {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .card {
+            background-color: #F3F4F6;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .footer {
+            background-color: #1F2937;
+            color: white;
+        }
+        .footer a {
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #4F46E5;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold text-teal-600">Syed Ali</div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-indigo-600 relative group">
+                    <img src="homez.png" alt="Home" class="h-10 w-10 rounded-full object-cover border-2 border-transparent group-hover:border-indigo-600 transition duration-300">
+                    <span class="mt-2">Home</span>
+                </a>
+                <a href="#about" class="hover:text-indigo-600 relative group">
+                    <img src="about.png" alt="About" class="h-10 w-10 rounded-full object-cover border-2 border-transparent group-hover:border-indigo-600 transition duration-300">
+                    <span class="mt-2">About</span>
+                </a>
+                <a href="#projects" class="hover:text-indigo-600 relative group">
+                    <img src="projects.png" alt="Projects" class="h-10 w-10 rounded-full object-cover border-2 border-transparent group-hover:border-indigo-600 transition duration-300">
+                    <span class="mt-2">Projects</span>
+                </a>
+                <a href="#skills" class="hover:text-indigo-600 relative group">
+                    <img src="Skills.png" alt="Skills" class="h-10 w-10 rounded-full object-cover border-2 border-transparent group-hover:border-indigo-600 transition duration-300">
+                    <span class="mt-2">Skills</span>
+                </a>
+                <a href="#contact" class="hover:text-indigo-600 relative group">
+                    <img src="contactz.png" alt="Contact" class="h-10 w-10 rounded-full object-cover border-2 border-transparent group-hover:border-indigo-600 transition duration-300">
+                    <span class="mt-2">Contact</span>
+                </a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-2/3 mb-6 md:mb-0">
+                <img src="Snapinsta.app_432173374_1762234524285606_3083567628626560526_n_1080.jpg" alt="Web Developer Image" class="w-full md:w-2/3 h-2/3 rounded-lg shadow-lg hover-effect">
+            </div>
+            <div class="w-full md:w-1/2 mt-6 md:mt-0 md:ml-6 hero-text">
+                <h1 class="text-4xl font-bold">Hi, I'm Ali, a Web Developer.</h1>
+                <p class="mt-4 text-lg">Welcome! I am a Passionate web developer crafting seamless digital experiences. Specializing in responsive, user-friendly websites that bring your ideas to life</p>
+                <a href="#contact" class="hero-btn mt-6 inline-block">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-r from-teal-100 to-teal-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 id="about" class="text-3xl font-bold text-center text-teal-700 mb-6">About Me</h2>
+            <p class="mt-4 text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed tracking-wide">
+                Hello! I’m <span class="font-semibold text-teal-600">Syed Ali</span>, a passionate and detail-oriented web developer with a keen eye for creating intuitive and visually appealing websites. With expertise in front-end technologies such as HTML, CSS, JavaScript, and React, I craft responsive and user-centric designs that ensure seamless experiences across all devices. I believe in combining creative design with solid functionality to deliver exceptional digital solutions. From developing custom web applications to optimizing performance and ensuring accessibility, I am dedicated to bringing your ideas to life. Let’s collaborate and build something amazing!
+            </p>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Skills Section -->
+    <section class="bg-indigo-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 id="skills" class="text-3xl font-bold text-center text-indigo-700 mb-8">Technical Skills</h2>
+            <div class="flex flex-wrap justify-center mt-6">
+                <!-- HTML -->
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                        <img src="html.png" alt="HTML" class="mx-auto h-16 mb-4">
+                        <p class="text-indigo-700 font-semibold">HTML</p>
+                    </div>
+                </div>
+    
+                <!-- CSS -->
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                        <img src="css.png" alt="CSS" class="mx-auto h-16 mb-4">
+                        <p class="text-indigo-700 font-semibold">CSS</p>
+                    </div>
+                </div>
+    
+                <!-- JavaScript -->
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                        <img src="java.png" alt="JavaScript" class="mx-auto h-16 mb-4">
+                        <p class="text-indigo-700 font-semibold">JavaScript</p>
+                    </div>
+                </div>
+    
+                <!-- React -->
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                        <img src="react.png" alt="React" class="mx-auto h-16 mb-4">
+                        <p class="text-indigo-700 font-semibold">React</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+<section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+        <h2 id="portfolio" class="text-4xl font-bold text-center text-indigo-700 mb-8">Projects</h2>
+        <div class="flex flex-wrap justify-center mt-6">
+            <!-- Project Card 1 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="booking-form-template-1.jpg" alt="Project 1" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Online Ticket Booking Website</h3>
+                        <p class="text-gray-600 mb-4">An Online Ticket Booking Website Project that allows users to book and pay for tickets directly.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="hostelzzz.png" alt="Project 2" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Hostel Management System</h3>
+                        <p class="text-gray-600 mb-4">A system for managing hostel bookings and operations with user-friendly interface.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="creatink-photo-website-template.jpg" alt="Project 3" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Photography Portfolio Website</h3>
+                        <p class="text-gray-600 mb-4">An elegant online platform to showcase photography skills with a sleek design.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="capitalshop-free-template.jpg" alt="Project 4" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Men's Styling Website</h3>
+                        <p class="text-gray-600 mb-4">A styling website for men, showcasing the latest trends and outfits.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="egames-free-template-1.jpg" alt="Project 5" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Gaming Website</h3>
+                        <p class="text-gray-600 mb-4">A platform dedicated to gaming enthusiasts with features like forums and leaderboards.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-1]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out">
+                    <img src="foodbar-free-template.jpg" alt="Project 6" class="w-full h-auto rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Restaurant System Website</h3>
+                        <p class="text-gray-600 mb-4">A dynamic restaurant website offering menu management, reservation, and ordering features.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="[live-demo-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+                            <a href="[github-link-2]" class="text-indigo-600 hover:text-indigo-800 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="bg-gradient-to-r from-blue-200 via-teal-200 to-lime-200 py-16">
+        <div class="container mx-auto px-6">
+            <h2 id="experience" class="text-4xl font-extrabold text-center text-gray-800 mb-8">Work Experience</h2>
+            <div class="flex flex-col space-y-8">
+                <!-- Web Developer Experience Card -->
+                <div class="bg-white shadow-md hover:shadow-lg transition-all duration-300 p-8 rounded-xl transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-2">Web Developer</h3>
+                    <p class="text-gray-600 text-lg mb-2">ABC Company</p>
+                    <p class="text-gray-500 mb-4">January 2020 - Present</p>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li class="text-gray-700">Developed and maintained multiple websites using HTML, CSS, and JavaScript.</li>
+                        <li class="text-gray-700">Implemented responsive design principles to ensure cross-device compatibility.</li>
+                        <li class="text-gray-700">Collaborated with designers to implement UI/UX enhancements.</li>
+                        <!-- Add more achievements or projects completed -->
+                    </ul>
+                </div>
+                <!-- Frontend Developer Experience Card -->
+                <div class="bg-white shadow-md hover:shadow-lg transition-all duration-300 p-8 rounded-xl transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-2">Frontend Developer</h3>
+                    <p class="text-gray-600 text-lg mb-2">XYZ Corporation</p>
+                    <p class="text-gray-500 mb-4">June 2018 - December 2019</p>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li class="text-gray-700">Designed and developed user interfaces for web applications using React.</li>
+                        <li class="text-gray-700">Integrated APIs to fetch and display dynamic content.</li>
+                        <li class="text-gray-700">Optimized website performance and accessibility.</li>
+                        <!-- Add more achievements or projects completed -->
+                    </ul>
+                </div>
+                <!-- Add more work experience sections as needed -->
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="bg-gradient-to-r from-teal-100 via-sky-100 to-lime-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Contact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Information Card -->
+                <div class="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-6">Contact Information</h3>
+                    <p class="text-gray-700 mb-4"><strong>Email:</strong> SyedAliRaza07@gmail.com</p>
+                    <p class="text-gray-700 mb-4"><strong>Phone:</strong> +92 3123456786</p>
+                    <p class="text-gray-700"><strong>Address:</strong> Buch Villas, Multan, Pakistan</p>
+                </div>
+    
+                <!-- Contact Form Card -->
+                <div class="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-6">Contact Form</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" name="name" id="name" class="mt-2 p-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" name="email" id="email" class="mt-2 p-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea name="message" id="message" rows="4" class="mt-2 p-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gray-800 text-white py-3 px-6 rounded-md hover:bg-gray-700 transition-all duration-300">Send Message</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+   <!-- Footer Section -->
+<footer class="footer py-4 bg-gray-800 text-white">
+    <div class="container mx-auto px-6 flex justify-center space-x-6">
+        <!-- LinkedIn -->
+        <a href="[social-link-1]" target="_blank" class="hover:text-indigo-400">
+            <i class="fab fa-linkedin fa-2x"></i> LinkedIn
+        </a>
+        <!-- GitHub -->
+        <a href="[social-link-2]" target="_blank" class="hover:text-indigo-400">
+            <i class="fab fa-github fa-2x"></i> GitHub
+        </a>
+        <!-- Twitter -->
+        <a href="[social-link-3]" target="_blank" class="hover:text-indigo-400">
+            <i class="fab fa-twitter fa-2x"></i> Twitter
+        </a>
+    </div>
+    <p class="text-center text-sm mt-4">&copy; 2024 Syed Ali. All rights reserved.</p>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
